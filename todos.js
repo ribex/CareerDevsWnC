@@ -1,22 +1,26 @@
 var todos = ["Item 1", "This will be deleted", "Item 3"];
 
+// Display the todos
 function displayTodos() {
-    console.log(todos);
+    console.log("Todos: " + todos);
 }
 
+// Add a new todo to the end of the array
 function addTodos(newTodo) {
     todos.push(newTodo);
-    console.log("Todos: " + todos);
+    displayTodos();
 }
 
+// Change an existing todo using the position in the array (index)
 function changeTodo(indexOfTodo, changedTodo) {
     todos[indexOfTodo] = changedTodo;
-    console.log("Todos: " + todos);
+    displayTodos();
 }
 
+// Delete a single todo using its index in the array
 function deleteTodo(indexOfTodo) {
     todos.splice(indexOfTodo, 1);
-    console.log("Todos: " + todos);    
+    displayTodos();    
 }
 
 addTodos("This is the final third todo");
