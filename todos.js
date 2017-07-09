@@ -17,6 +17,7 @@ var todoList = {
   }
 };
 
+// Run some tests
 todoList.addTodo("This is the final third todo");
 todoList.changeTodo(2, "The final second todo");
 todoList.deleteTodo(1);
