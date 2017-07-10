@@ -3,21 +3,28 @@ var todoList = {
   displayTodos: function() {
     console.log('My todos:', this.todos);
   },
-  addTodo: function(todo) {
-    this.todos.push(todo);
+  addTodo: function(todoText) {
+    this.todos.push({
+        todoText: todoText,
+        completed: false
+    });
     this.displayTodos();
   },
-  changeTodo: function(position, changedTodo) {
-    this.todos[position] = changedTodo;
+  changeTodo: function(position, todoText) {
+    this.todos[position].todoText = todoText;
     this.displayTodos();
   },
   deleteTodo: function(position) {
     this.todos.splice(position, 1);
     this.displayTodos();
+  },
+  toggleCompleted: function(position) {
+    var todo = this.todos[position];
+    todo.completed = !todo.completed;
+    this.displayTodos();
   }
 };
 
-// Run some tests
 todoList.addTodo("This is the final third todo");
 todoList.changeTodo(2, "The final second todo");
 todoList.deleteTodo(1);
