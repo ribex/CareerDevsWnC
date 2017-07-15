@@ -1,5 +1,5 @@
 var todoList = {
-  todos: ["Item 1", "This will be deleted", "Item 3"],
+  todos: [],
   displayTodos: function() {
     
     if (this.todos.length === 0) {
@@ -66,8 +66,15 @@ var handlers = {
     todoList.toggleAll();
   },
   addTodo: function() {
-    var addTodoTextInput = document.getElementById(addTodoTextInput);
+    var addTodoTextInput = document.getElementById('addTodoTextInput');
     todoList.addTodo(addTodoTextInput.value);
-    addTodoTextInput = '';
+    addTodoTextInput.value = '';
+  },
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    changeTodoPositionInput.value = '';
+    changeTodoTextInput.value = '';
   }
 };
