@@ -15,7 +15,7 @@
         
         <div>
             <button onclick="handlers.addTodo()">Add</button>
-            <input type="text" id="addTodoTextInput" placeholder="Todo"/>
+            <input type="text" id="addTodoTextInput"/>
         </div>
         
         <div>
@@ -27,6 +27,11 @@
         <div>
             <button onclick="handlers.deleteTodo()">Delete</button>
             <input type="number" id="deleteTodoPositionInput"/>
+        </div>
+        
+        <div>
+            <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+            <input type="number" id="toggleCompletedPositionInput"/>
         </div>
         
         <script type="text/javascript" src="./todos.js"></script>
