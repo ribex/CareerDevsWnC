@@ -95,8 +95,9 @@ var view = {
     todosUl.innerHTML = '';
     
     for (var i = 0; i < todoList.todos.length; i++) {
-      var todosLi = document.createElement('li');
-      todosUl.appendChild(todosLi);
+      var todoLi = document.createElement('li');
+      todoLi.textContent = todoList.todos[i].todoText;
+      todosUl.appendChild(todoLi);
       
     }
   }
